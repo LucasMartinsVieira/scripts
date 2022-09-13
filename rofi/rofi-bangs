@@ -62,6 +62,14 @@ LABELS["Rofi-Calc"]=""
 COMMANDS["Rofi-Books"]="rofi-books"
 LABELS["Rofi-Books"]=""
 
+# Rofi-Wifi
+COMMANDS["Rofi-Wifi"]="rofi-wifi"
+LABELS["Rofi-Wifi"]=""
+
+# Rofi-Quikmarks
+COMMANDS["Rofi-Quikmarks"]="rofi-quikmarks"
+LABELS["Rofi-Quikmarks"]=""
+
 ################################################################################
 # do not edit below
 ################################################################################

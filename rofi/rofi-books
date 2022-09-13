@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LIBRARY="$HOME/Documentos/Media/Livros/"
+LIBRARY="$HOME/Media/Livros/"
 
 function main() {
 	books=$(find $LIBRARY | grep '\.epub\|\.pdf')
