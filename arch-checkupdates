@@ -3,5 +3,10 @@
 #Dependencies: pacman-contrib 
 
 UPDATES=$(checkupdates | wc -l ; checkupdates)
+UPDATESWC=$(checkupdates | wc -l)
 
-notify-send "UPDATES :  $UPDATES"
+if [ "$UPDATESWC" == 0 ]; then
+  notify-send "No Updates Available"
+else
+  notify-send "UPDATES : $UPDATES"
+fi
