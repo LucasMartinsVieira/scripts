@@ -11,14 +11,14 @@ my_hostname=$(hostname)
 
 # Options
 shutdown="Shutdown"
-restart="Restart"
 reboot="Reboot"
 suspend="Suspend"
 logout="Logout"
+lock="Lock"
 quit="Quit"
 
 # Variable passed to rofi
-options="$shutdown\n$restart\n$reboot\n$suspend\n$logout\n$quit"
+options="$shutdown\n$reboot\n$suspend\n$lock\n$logout\n$quit"
 
 chosen="$(echo -e "$options" | $ROFI -p " $my_hostname | $uptime" -dmenu -selected-row 2)"
 case $chosen in
@@ -29,11 +29,11 @@ case $chosen in
                 output "User chose not to shutdown." && exit 0
             fi
             ;;
-    $restart)
-      if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Restart?' "${options}?" "${@}" )" == "Yes" ]]; then
-                awesome-client 'awesome.restart()'
+    $lock)
+      if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Lock?' "${options}?" "${@}" )" == "Yes" ]]; then
+                slock
             else
-                output "User chose not to restart." && exit 0
+                output "User chose not to lock." && exit 0
             fi
             ;;
 
