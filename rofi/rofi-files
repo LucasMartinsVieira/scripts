@@ -16,7 +16,7 @@ edit_list[Fish]="$HOME/.config/config.fish"
 edit_list[Kitty]="$HOME/.config/kitty/kitty.conf"
 edit_list[Neovim]="$HOME/.config/nvim/init.lua"
 edit_list[Picom]="$HOME/.config/picom/picom.conf"
-edit_list[Ranger]="$HOME/.config/ranger/rc.conf"
+edit_list[Lf]="$HOME/.config/lf/lfrc"
 edit_list[Qutebrowser]="$HOME/.config/qutebrowser/config.py"
 edit_list[Zathura]="$HOME/.config/zathura/zathurarc"
 
