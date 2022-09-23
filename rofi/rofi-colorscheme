@@ -15,11 +15,13 @@ config="${colorschemes["${choice}"]}"
 
 if [ "$choice" ]; then
   # Set the theme for Kitty
-  sed -i "s|^include ./themes/.*.conf|include ./themes/$config.conf|g" ~/.config/kitty/kitty.conf
+  sed -i "s|^include ./themes/.*.conf|include ./themes/$config.conf|g" "$HOME"/.config/kitty/kitty.conf
+  # Set the therme for Alacritty
+  sed -i "s/^colors: .*/colors: \*$config/g" "$HOME"/.config/alacritty/alacritty.yml
   # Set the theme for Nvim
-  sed -i "s/^local colorscheme = '.*'/local colorscheme = '$config'/g" ~/.config/nvim/lua/user/colorscheme.lua                                                                                     
+  sed -i "s/^local colorscheme = '.*'/local colorscheme = '$config'/g" "$HOME"/.config/nvim/lua/user/colorscheme.lua                                                                                     
   # Set the theme for AwesomeWM
-  sed -i "s|^local colors = require('theme.*')|local colors = require('theme.$config')|g" ~/.config/awesome/theme/theme.lua
+  sed -i "s|^local colors = require('theme.*')|local colors = require('theme.$config')|g" "$HOME"/.config/awesome/theme/theme.lua
   # Restart Awesome
   awesome-client 'awesome.restart()';
   else
