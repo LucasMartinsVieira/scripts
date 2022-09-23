@@ -10,6 +10,7 @@
 #               HostGrady
 
 declare -A edit_list
+edit_list[Alacritty]="$HOME/.config/alacritty/alacritty.yml"
 edit_list[Awesome]="$HOME/.config/awesome/rc.lua"
 edit_list[Bash]="$HOME/.bashrc"
 edit_list[Fish]="$HOME/.config/config.fish"
@@ -20,7 +21,7 @@ edit_list[Lf]="$HOME/.config/lf/lfrc"
 edit_list[Qutebrowser]="$HOME/.config/qutebrowser/config.py"
 edit_list[Zathura]="$HOME/.config/zathura/zathurarc"
 
-DMEDITOR="kitty -e nvim"
+DMEDITOR="alacritty -e nvim"
 
 main() {
   # Clean options array making sure that the files exist
