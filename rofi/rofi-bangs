@@ -42,10 +42,6 @@ LABELS["Rofi-Beats"]=""
 COMMANDS["Rofi-Maim"]="rofi-maim"
 LABELS["Rofi-Maim"]=""
 
-# Rofi-Weather
-COMMANDS["Rofi-Weather"]="rofi-weather"
-LABELS["Rofi-Weather"]=""
-
 # Rofi-Kill
 COMMANDS["Rofi-Kill"]="rofi-kill"
 LABELS["Rofi-Kill"]=""
@@ -58,17 +54,9 @@ LABELS["Rofi-Pass"]=""
 COMMANDS["Rofi-Calc"]="rofi -show calc"
 LABELS["Rofi-Calc"]=""
 
-# Rofi-Books
-COMMANDS["Rofi-Books"]="rofi-books"
-LABELS["Rofi-Books"]=""
-
 # Rofi-Wifi
 COMMANDS["Rofi-Wifi"]="rofi-wifi"
 LABELS["Rofi-Wifi"]=""
-
-# Rofi-Quikmarks
-COMMANDS["Rofi-Quikmarks"]="rofi-quikmarks"
-LABELS["Rofi-Quikmarks"]=""
 
 ################################################################################
 # do not edit below
