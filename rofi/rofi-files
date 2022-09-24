@@ -21,7 +21,7 @@ edit_list[Lf]="$HOME/.config/lf/lfrc"
 edit_list[Qutebrowser]="$HOME/.config/qutebrowser/config.py"
 edit_list[Zathura]="$HOME/.config/zathura/zathurarc"
 
-DMEDITOR="alacritty -e nvim"
+DMEDITOR="$TERM -e nvim"
 
 main() {
   # Clean options array making sure that the files exist
