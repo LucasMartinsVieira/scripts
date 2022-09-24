@@ -13,7 +13,7 @@ declare -A edit_list
 edit_list[Alacritty]="$HOME/.config/alacritty/alacritty.yml"
 edit_list[Awesome]="$HOME/.config/awesome/rc.lua"
 edit_list[Bash]="$HOME/.bashrc"
-edit_list[Fish]="$HOME/.config/config.fish"
+edit_list[Fish]="$HOME/.config/fish/config.fish"
 edit_list[Kitty]="$HOME/.config/kitty/kitty.conf"
 edit_list[Neovim]="$HOME/.config/nvim/init.lua"
 edit_list[Picom]="$HOME/.config/picom/picom.conf"
