@@ -30,10 +30,6 @@ LABELS["Rofi-Files"]=""
 COMMANDS["Rofi-Search"]="rofi-search"
 LABELS["Rofi-Search"]=""
 
-# Rofi-Watchmenu
-COMMANDS["Rofi-Watchmenu"]="rofi-watchmenu"
-LABELS["Rofi-Watchmenu"]=""
-
 # Rofi-Beats
 COMMANDS["Rofi-Beats"]="rofi-beats"
 LABELS["Rofi-Beats"]=""
@@ -41,10 +37,6 @@ LABELS["Rofi-Beats"]=""
 # Rofi-Maim
 COMMANDS["Rofi-Maim"]="rofi-maim"
 LABELS["Rofi-Maim"]=""
-
-# Rofi-Kill
-COMMANDS["Rofi-Kill"]="rofi-kill"
-LABELS["Rofi-Kill"]=""
 
 # Rofi-Pass
 COMMANDS["Rofi-Pass"]="rofi-pass"
@@ -54,9 +46,9 @@ LABELS["Rofi-Pass"]=""
 COMMANDS["Rofi-Calc"]="rofi -show calc"
 LABELS["Rofi-Calc"]=""
 
-# Rofi-Wifi
-COMMANDS["Rofi-Wifi"]="rofi-wifi"
-LABELS["Rofi-Wifi"]=""
+# Rofi-Wallpaper
+COMMANDS["Rofi-Wallpaper"]="rofi-wallpaper"
+LABELS["Rofi-Wallpaper"]=""
 
 ################################################################################
 # do not edit below
