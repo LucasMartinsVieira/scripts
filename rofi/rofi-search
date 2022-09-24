@@ -7,7 +7,7 @@
 # Contributors: Derek Taylor
 
 # Defining our web browser.
-BROWSER="librewolf"
+BROWSER="xdg-open"
 
 # An array of search engines.  You can edit this list to add/remove
 # search engines. The format must be: "engine_name - url".
@@ -20,12 +20,10 @@ websearch[Amazon]="https://www.amazon.com.br/s?k="
 websearch[ArchAur]="https://aur.archlinux.org/packages?O=0&K="
 websearch[ArchPkg]="https://archlinux.org/packages/?sort=&q="
 websearch[ArchWiki]="https://wiki.archlinux.org/index.php?search="
-## websearch[BaixakiFilmes]="https://baixakifilmes.net/?s="
 websearch[Bing]="https://www.bing.com/search?q="
 websearch[Duckduckgo]="https://duckduckgo.com/?q="
 websearch[Ecosia]="https://www.ecosia.org/search?q="
 websearch[GitHub]="https://github.com/search?q="
-websearch[GitLab]="https://gitlab.com/search?search="
 websearch[Google]="https://www.google.com/search?q="
 websearch[GoogleImages]="https://www.google.com/search?hl=en&tbm=isch&q="
 websearch[GoogleNews]="https://news.google.com/search?q="
