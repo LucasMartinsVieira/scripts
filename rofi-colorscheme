@@ -20,6 +20,8 @@ if [ "$choice" ]; then
   sed -i "s|^- ~/.config/alacritty/themes/.*.yml|- ~/.config/alacritty/themes/$config.yml|g" "$HOME/.config/alacritty/alacritty.yml"
   # Set the theme for Nvim
   sed -i "s/^local colorscheme = '.*'/local colorscheme = '$config'/g" "$HOME"/.config/nvim/lua/user/colorscheme.lua                                                                                     
+  # Set the theme for Rofi
+  sed -i 's|^@theme "~/.config/rofi/themes/.*.rasi"|@theme "~/.config/rofi/themes/'$config'.rasi"|g' "$HOME/.config/rofi/config.rasi"
   # Set the theme for AwesomeWM
   sed -i "s|^local colors = require('theme.*')|local colors = require('theme.$config')|g" "$HOME"/.config/awesome/theme/theme.lua
   # Restart Awesome
@@ -27,4 +29,3 @@ if [ "$choice" ]; then
   else
    echo "Program terminated." && exit 0
 fi
-
