@@ -1,67 +1,65 @@
 #!/bin/bash
 
-## Author : Aditya Shakya (adi1090x)
-## Mail : adi1090x@gmail.com
-## Github : @adi1090x
-## Reddit : @adi1090x
+ROFI="rofi -dmenu -i -p"
+UPTIME=$(uptime -p)
+WHO=$(whoami)
 
-ROFI="rofi -dmenu -i"
-uptime=$(uptime -p)
-my_hostname=$(hostname)
+# Powermenu opts
+declare -a opts=(
+"Shutdown"
+"Reboot"
+"Suspend"
+"Lock"
+"Logout"
+"Quit"
+)
 
-# Options
-shutdown="Shutdown"
-reboot="Reboot"
-suspend="Suspend"
-logout="Logout"
-lock="Lock"
-quit="Quit"
+choice=$(printf '%s\n' "${opts[@]}" | ${ROFI} "$WHO | $UPTIME" "${@}")
 
-# Variable passed to rofi
-options="$shutdown\n$reboot\n$suspend\n$lock\n$logout\n$quit"
-
-chosen="$(echo -e "$options" | $ROFI -p " $my_hostname | $uptime" -dmenu -selected-row 2)"
-case $chosen in
-    $shutdown)
-      if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Shutdown?' "${options}?" "${@}" )" == "Yes" ]]; then
+main() {
+case $choice in
+    'Shutdown')
+      if [[ "$(echo -e "No\nYes" | ${ROFI} 'Shutdown?')" == "Yes" ]]; then
                 systemctl poweroff
             else
-                output "User chose not to shutdown." && exit 0
+                echo "User chose not to Shutdown." && exit 0
             fi
             ;;
-    $lock)
-      if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Lock?' "${options}?" "${@}" )" == "Yes" ]]; then
+    'Lock')
+      if [[ "$(echo -e "No\nYes" | ${ROFI} 'Lock?')" == "Yes" ]]; then
                 slock
             else
-                output "User chose not to lock." && exit 0
+                echo "User chose not to Lock." && exit 0
             fi
             ;;
 
-    $reboot)
-       if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Reboot?' "${options}?" "${@}" )" == "Yes" ]]; then
+    'Reboot')
+       if [[ "$(echo -e "No\nYes" | ${ROFI} 'Reboot?')" == "Yes" ]]; then
                 systemctl reboot
             else
-                output "User chose not to reboot." && exit 0
+                echo "User chose not to Reboot." && exit 0
             fi
             ;;
 
-    $suspend)
-      if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Suspend?' "${options}?" "${@}" )" == "Yes" ]]; then
+    'Suspend')
+      if [[ "$(echo -e "No\nYes" | ${ROFI} 'Suspend?')" == "Yes" ]]; then
                 systemctl suspend
             else
-                output "User chose not to suspend." && exit 0
+                echo "User chose not to Suspend." && exit 0
             fi
             ;;
 
-    $logout)
-      if [[ "$(echo -e "No\nYes" | rofi -dmenu -i -p 'Logout?' "${options}?" "${@}" )" == "Yes" ]]; then
-                 pkill -KILL -u $USER
+    'Logout')
+      if [[ "$(echo -e "No\nYes" | ${ROFI} 'Logout?')" == "Yes" ]]; then
+                 pkill -KILL -u "$USER"
             else
-                output "User chose not to logout." && exit 1
+                echo "User chose not to Logout." && exit 1
             fi
             ;;
 
-    $quit)
-        echo "Program terminated." && exit 1
+    'Quit')
+        echo "Program terminated." && exit 0
         ;;
 esac
+}
+main

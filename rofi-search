@@ -37,6 +37,7 @@ websearch[Twitter]="https://twitter.com/search?q="
 websearch[Wikipedia]="https://pt.wikipedia.org/wiki/"
 websearch[Wiktionary]="https://pt.wiktionary.org/w/index.php?search="
 websearch[Youtube]="https://www.youtube.com/results?search_query="
+websearch[Brave]="https://search.brave.com/search?q="
 
 main(){
 
