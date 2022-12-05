@@ -9,7 +9,6 @@ declare -a opts=(
 "Shutdown"
 "Reboot"
 "Suspend"
-"Lock"
 "Logout"
 "Quit"
 )
@@ -23,13 +22,6 @@ case $choice in
                 systemctl poweroff
             else
                 echo "User chose not to Shutdown." && exit 0
-            fi
-            ;;
-    'Lock')
-      if [[ "$(echo -e "No\nYes" | ${ROFI} 'Lock?')" == "Yes" ]]; then
-                slock
-            else
-                echo "User chose not to Lock." && exit 0
             fi
             ;;
 
